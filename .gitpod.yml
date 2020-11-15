@@ -3,6 +3,7 @@ image:
 tasks:
   - name: Clippy
     init: cargo clippy --all -- -D clippy::result_unwrap_used -D clippy::option_unwrap_used
+    prebuild: rustup component add rust-analysis rust-src rls clippy
   - name: Testing
     init: cargo test --all
   - name: Build
