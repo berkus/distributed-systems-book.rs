@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: Clippy
-    init: cargo clippy --all -- -D clippy::result_unwrap_used -D clippy::option_unwrap_used
+    init: cargo clippy --all -- -D clippy::unwrap_used
   - name: Testing
     init: cargo test --all
   - name: Build
