@@ -1,0 +1,15 @@
+[package]
+name = "distbook"
+version = "0.1.0"
+authors = ["Berkus Decker <berkus+cargo@metta.systems>"]
+license = "BlueOak-1.0.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+snafu = "0.6"
+anyhow = "1.0"
+log = "0.4"
+fern = { version = "0.6", features = ["colored"] }
+itertools = "0.9"
+
