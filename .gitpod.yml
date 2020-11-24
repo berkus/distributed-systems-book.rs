@@ -3,11 +3,11 @@ image:
 
 tasks:
   - name: Clippy
-    init: cargo clippy --all -- -D clippy::unwrap_used
+    command: cargo clippy --all -- -D clippy::unwrap_used
   - name: Testing
-    init: cargo test --all
+    command: cargo test --all
   - name: Build
-    init: cargo build
+    command: cargo build
 
 github:
   prebuilds:
