@@ -7,6 +7,12 @@ tasks:
     init: cargo test --all
   - name: Build
     init: cargo build
+  - name: Prebuild Setup
+    prebuild: |
+      rustup toolchain install nightly
+      rustup default nightly
+      rustup component add rust-analysis rust-src rls clippy rustfmt
+      cargo install cargo-make just
 github:
   prebuilds:
     branches: true
