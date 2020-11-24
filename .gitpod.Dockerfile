@@ -5,8 +5,8 @@ USER gitpod
 RUN sudo apt-get update && \
     sudo apt-get install -y \
         pkg-config \
+        libpython3.6 \
         rust-lldb \
-    && rustup component add rust-analysis rust-src rls clippy rustfmt \
     && sudo rm -rf /var/lib/apt/lists/*
 
 ENV RUST_LLDB=/usr/bin/lldb-8
